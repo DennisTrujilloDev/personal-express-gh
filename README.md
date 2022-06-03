@@ -6,4 +6,4 @@ Welcome to the Cafe, where you can input your orders.
 Tech Stack: 
 MongoDB, Express, HTML, CSS, Node.js
 
-I use MongoDb to save the cafe orders, where they are later retrieved from the database and posted onto the DOM via ejs. This application uses CRUD to process the data passed around between the database and the different pages that make up this full-stack application. 
+I use MongoDb to save the cafe orders, where they are later retrieved from the database and posted onto the DOM via ejs. This application uses CRUD to transmit the data passed around between the database and the different pages that make up this full-stack application. 
