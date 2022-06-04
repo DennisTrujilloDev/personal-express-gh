@@ -1,4 +1,4 @@
-Welcome to the Cafe, where you can input, delete and update orders.  
+Welcome to the Cafe, where you can input, delete and update orders. After completing your order, simply click on it to update its completion status in the system. 
 
 ![cafe](https://user-images.githubusercontent.com/98935149/171880237-8522d4c6-64b3-4ff7-b549-b25254ed0527.jpg)
 
