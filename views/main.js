@@ -1,7 +1,7 @@
 const ul = document.querySelector("ul");
 // const tempType = document.querySelector("#tempDiv");
 // const sweetType = document.querySelector("#sweetDiv");
-
+const listItem = document.querySelectorAll('li')
 
 const deleteIt = document.querySelector("#delete")
 //delete button
@@ -10,6 +10,29 @@ const complete = document.querySelector("#complete")
 
 // tempType.addEventListener('click', tempTypeChosen)
 // sweetType.addEventListener('click', sweetTypeChosen)
+
+
+// listItem.addEventListener('click', update)
+  Array.from(listItem).forEach((ele)=>{
+    ele.addEventListener('click', updateLI)
+  })
+  function updateLI(e){
+    let itemID = e.target.getAttribute('data-id')
+  fetch('updateOrder', {
+    method: 'put',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      'id': itemID
+    })
+  }).then(function (response) {
+    console.log(response);
+    window.location.reload()
+  })
+}
+
+
+
+
 deleteIt.addEventListener('click', deleteThem)
 
 function deleteThem(){
@@ -18,8 +41,6 @@ function deleteThem(){
   Array.from(listItem).forEach((ele)=>{
     IDsToDelete.push(ele.getAttribute('data-id'))
   })
-  
-  // console.log(oneCoffeeOrder);
   
   fetch('deleteEm', {
     method: 'delete',

@@ -35,16 +35,16 @@
 			</select><br><br>
 
 			<button type="submit" id="complete">Complete Order</button>
-			<button type="button" id="delete">Clear Order</button>
+			<button type="button" id="delete">Clear Orders</button>
 		</form><br>
 
 		<h2 id="receipt">Order(s):</h2>
 
 		<ul>
-			<% for (let [key, indivOrder] of Object.entries(coffeeOrders)){ %>
+			<% for (let indivOrder of coffeeOrders){ %>
 
 			<!-- used to do data parsing, any logic thats not directly outputting to dom  -->
-			<li data-id="<%=indivOrder.id%>"> <%= `1 ${indivOrder.type}: ${indivOrder.temp} & ${indivOrder.sweet}, please! `%>
+			<li data-id="<%=indivOrder.id%>"> <%= `1 ${indivOrder.type}: ${indivOrder.temp} & ${indivOrder.sweet} (${indivOrder.status}) `%>
 			</li>
 			<!-- use this syntax to output ot dom  -->
 			<% } %>
